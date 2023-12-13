@@ -7,8 +7,6 @@
 
 
 ##pwd
-##cd: Entra e sai de pastas.
-
 
 ##cd nome_da_pasta
 ##cd /: Navega até o diretório raiz.
