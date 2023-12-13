@@ -1,76 +1,68 @@
+# Comandos de Navegação:
 
-# Aulas de Comandos Básicos no Terminal Linux
-## Bem-vindo ao guia de Comandos Básicos no Terminal Linux. Este documento é um recurso rápido para aprender e revisar os fundamentos do uso do terminal no sistema operacional Linux.
+## pwd: Indica o local onde a pasta está localizada (CAMINHO).
+## cd: Entra ou sai de uma pasta.
+## cd /: Entra no diretório raiz.
+## ls: Lista o conteúdo do diretório.
+## cd ..: Volta para o diretório anterior.
+## cd ../../: Volta dois diretórios anteriores.
+# OBS: Ao digitar o início do comando + TAB, autocompleta o comando desejado.
 
-# Navegação no Sistema de Arquivos
-## pwd: Mostra o caminho do diretório atual.
+# Comandos de Visualização e Limpeza:
 
-
-## pwd
-
-## cd nome_da_pasta
-## cd /: Navega até o diretório raiz.
-
-# ls: Lista o conteúdo do diretório.
-
-
-## ls
-## cd .. e cd ../../: Volta para o diretório anterior.
-
-# Autocompletar Comandos: Digite o início do comando e pressione TAB para autocompletar.
-
-# Limpeza e Visualização
 ## clear: Limpa a tela do terminal.
-## clear
-## Manipulação de Pastas e Arquivos
-## mkdir: Cria uma nova pasta.
+## Comandos de Manipulação de Arquivos e Pastas:
 
-## mkdir nome_da_pasta
-## echo: Escreve na tela ou redireciona para um arquivo.
+## mkdir nome_da_pasta: Cria uma pasta.
+## echo mensagem > nome_arquivo.tipo: Escreve uma mensagem em um arquivo.
+## cat nome_arquivo.tipo: Mostra o conteúdo de um arquivo.
+## more nome_arquivo.tipo: Mostra o conteúdo de um arquivo (página por página).
+## gedit nome_arquivo.tipo: Abre o editor com o conteúdo do arquivo.
+## cp nome_arquivo pasta/novo_nome_arquivo local/.: Copia um arquivo para um novo local. (`. finaliza o comando)
+## mv nome_arquivo novo_nome_arquivo: Renomeia um arquivo.
+## mv nome_arquivo pasta/novo_nome_arquivo: Move um arquivo para outra pasta. (OBS: Copia e Cola)
+## rm nome_arquivo: Apaga um arquivo.
+## rm -rf nome_pasta: Apaga uma pasta e seu conteúdo.
 
+# Comandos de Permissão e Propriedade:
 
-## echo mensagem > nome_do_arquivo.tipo
-## cat e more: Mostra o conteúdo de um arquivo.
+## chmod 777 nome_arquivo.tipo: Concede permissões totais a um arquivo.
+## sudo chown root:root nome_arquivo.tipo: Muda o dono do arquivo para root.
+## sudo chown usuario_dono:usuario_dono nome_arquivo.tipo: Restaura o dono do arquivo.
 
-## cat nome_do_arquivo.tipo
-## more nome_do_arquivo.tipo
-## gedit: Abre o editor de texto.
-## gedit nome_do_arquivo.tipo
+# Comandos de Listagem Detalhada:
 
-# Manipulação de Arquivos e Diretórios
-## cp: Copia arquivos para outro local.
+## ls -l: Lista detalhes do conteúdo da pasta.
+## ls -lh: Lista detalhes com unidades de medida.
 
+# Valores de Permissões:
 
-## cp nome_do_arquivo nova_pasta/
-## mv: Renomeia ou move arquivos.
+## 4 = Leitura do arquivo.
+## 2 = Escrita no arquivo.
+## 1 = Executar o arquivo.
 
+### Exemplo de permissão total: 7 (4+2+1) para Dono, Grupo e Usuário.
+### Representação: rwx para Dono, Grupo e Usuário.
 
-## mv nome_do_arquivo novo_nome_arquivo.tipo
-## mv nome_do_arquivo nova_pasta/
-## rm e rm -rf: Apaga arquivos ou diretórios recursivamente.
-## rm nome_do_arquivo
-## rm -rf nome_da_pasta
+## Exemplos de Permissões:
 
-# Permissões de Arquivos e Diretórios
-# chmod e chown: Altera permissões e donos de arquivos.
-## chmod 777 nome_do_arquivo.tipo
-## sudo chown root:root nome_do_arquivo.tipo
-## sudo chown usuario_dono:grupo_dono nome_do_arquivo.tipo
-## Listagem Detalhada
-## ls -l: Lista com detalhes.
-
-
-## ls -l
-## ls -lh: Lista com detalhes e unidades de medida.
-### ls -lh
-
-# Exemplos de Permissões
-## r-x: Sem permissão de escrita.
+## r-x: Não tem permissão de escrita no arquivo.
 ## r--: Somente leitura.
 
 # Alterar Permissão do Arquivo:
 
+## Comando: chmod 777 nome_arquivo.tipo arquivo (Acesso a permissão total).
 
-## chmod 755 nome_do_arquivo.tipo
-## Lembre-se, o ROOT é o administrador do sistema e comandos podem necessitar de sudo para execução.
+# Mudar Dono do Arquivo:
+
+## Lembrando que ROOT é o administrador dos arquivos e diretórios do sistema e deve iniciar com SUDO.
+## sudo chown root:root nome_arquivo.tipo arquivo.
+
+# Voltar o Dono do Arquivo:
+
+## sudo chown usuario_dono:usuario_dono nome_arquivo.tipo arquivo.
+
+# Apagar Arquivos e Diretórios:
+## rm *: Apaga arquivos.
+## rm -rf *: Apaga diretórios/pastas.
 
